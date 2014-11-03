@@ -3,6 +3,6 @@ class ZipStreetCountry < ActiveRecord::Migration
   	add_column :locations, :zip_code, :integer
   	add_column :locations, :street, :string
   	add_column :locations, :country, :string
-  	add_column :location, :description, :text
+  	add_column :locations, :description, :text
   end
 end
