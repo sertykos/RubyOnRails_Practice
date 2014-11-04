@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Locations</title>
+</head>
+<body>
+	<% @locations.each do |locs| %>
+		<ul>
+			<% if locs.name.present? %>
+				<li><%= locs.name %> - <%= locs.city %></li>
+			<% else %>
+				<li><%= locs.city %></li>
+			<% end %>
+		</ul>
+	<% end %>
+</body>
+</html>

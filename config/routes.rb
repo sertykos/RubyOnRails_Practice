@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
   root 'home#welcome'
   get 'contact' => 'home#contact'
+  get 'locations' => 'locations#index'
 end
