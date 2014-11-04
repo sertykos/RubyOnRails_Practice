@@ -56,4 +56,5 @@ Rails.application.routes.draw do
   root 'home#welcome'
   get 'contact' => 'home#contact'
   get 'locations' => 'locations#index'
+  get 'locations/:id' => 'locations#show'
 end
