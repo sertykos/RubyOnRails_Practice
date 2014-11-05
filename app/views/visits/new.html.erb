@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VisitsForm</title>
+</head>
+<body>
+	<%= form_for [@location, @new_visit] do |f| %>
+		<%= f.label :user_name %>
+		<%= f.text_field :user_name %>
+	<br/>
+		<%= f.datetime_select(:from_date, default: Time.now + 1.days) %>
+		<%= f.datetime_select(:to_date, default: Time.now + 1.days) %>
+	<br/>
+		<%= f.submit "Submit" %>
+	<% end %>
+</body>
+</html>

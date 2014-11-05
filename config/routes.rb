@@ -54,7 +54,13 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root 'home#welcome'
-  get 'contact' => 'home#contact'
-  get 'locations' => 'locations#index'
-  get 'locations/:id' => 'locations#show'
+  #get 'contact' => 'home#contact'
+  #get 'locations' => 'locations#index'
+  #get 'locations/:id' => 'locations#show'
+  #get 'locations/:location_id/visits' => 'visits#index'
+  #get 'locations/:location_id/visits/:location_id' => 'visits#show'
+
+  resources :locations do
+    resources :visits
+  end
 end

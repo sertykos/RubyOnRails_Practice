@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IndexOnVisits</title>
+</head>
+<body>
+	<% @visits.each do |x| %>
+		<ul>
+			<li>Username: <%= x.user_name %> ; From: <%= x.from_date %> ; To: <%= x.to_date %></li>
+		</ul>
+	<% end %>
+</body>
+</html>
