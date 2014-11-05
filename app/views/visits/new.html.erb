@@ -5,6 +5,15 @@
 	<title>VisitsForm</title>
 </head>
 <body>
+
+	<% if @visit.error.any? %>
+		<ul>
+			<% @visit.errors.full_message.each do |error_message| %>
+				<li><%= error_message %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
 	<%= form_for [@location, @new_visit] do |f| %>
 		<%= f.label :user_name %>
 		<%= f.text_field :user_name %>
